@@ -161,18 +161,20 @@ http://127.0.0.1:5000
 ## 📸 Project Screenshots
 
 ### 🔐 Login Page
-![Login Page](screenshots/login-page.png)
+![Login Page](static/Screenshot/Login%20Page.PNG)
 
 ### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](static/Screenshot/Dashboard.PNG)
+
+### Password Analysis Results
+![Password Analysis Results](static/Screenshot/Password%20Analysis%20Results.PNG)
 
 ### 📄 Reports Page
-![Reports Page](screenshots/reports-page.png)
+![Reports Page](static/Screenshot/Reports%20Page.PNG)
 
 ### 📥 PDF Report
-![PDF Report](screenshots/pdf-report.png)
+![PDF Report](static/Screenshot/PDF%20Report.PNG)
 
-    --------
 
 ## 🎯 Learning Outcomes
 
