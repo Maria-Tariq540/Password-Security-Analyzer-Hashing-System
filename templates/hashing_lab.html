@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hashing Laboratory
+{% endblock %}
+
+{% block content %}
+
+<div class="card card-dark">
+
+    <div class="card-body">
+
+        <h3 class="mb-4">
+
+            Cryptographic Hashing Laboratory
+
+        </h3>
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+
+                    Enter Password
+
+                </label>
+
+                <input
+                    type="text"
+                    name="password"
+                    class="form-control custom-input"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-main">
+
+                Generate Hashes
+
+            </button>
+
+        </form>
+
+        {% if hashes %}
+
+        <hr class="my-4">
+
+        <h4>Generated Hashes</h4>
+
+        <div class="result-box">
+
+            <strong>MD5</strong>
+
+            <p>{{ hashes.MD5 }}</p>
+
+        </div>
+
+        <div class="result-box">
+
+            <strong>SHA-256</strong>
+
+            <p>{{ hashes.SHA256 }}</p>
+
+        </div>
+
+        <div class="result-box">
+
+            <strong>SHA-512</strong>
+
+            <p>{{ hashes.SHA512 }}</p>
+
+        </div>
+
+        <div class="result-box">
+
+            <strong>BCrypt</strong>
+
+            <p>{{ hashes.BCRYPT }}</p>
+
+        </div>
+
+        <div class="result-box">
+
+            <strong>Argon2</strong>
+
+            <p>{{ hashes.ARGON2 }}</p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}

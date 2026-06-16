@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+Strength Analyzer
+{% endblock %}
+
+{% block content %}
+
+<div class="card card-dark">
+
+    <div class="card-body">
+
+        <h3 class="mb-4">
+            Password Strength Analyzer
+        </h3>
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Enter Password
+                </label>
+
+                <input
+                    type="text"
+                    name="password"
+                    class="form-control custom-input"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-main">
+
+                Analyze Password
+
+            </button>
+
+        </form>
+
+        {% if result %}
+
+        <hr class="my-4">
+
+        <h4>Analysis Result</h4>
+
+        <div class="result-box">
+
+            <h5>
+                Security Score:
+                {{ result.score }}/100
+            </h5>
+
+            <h5>
+                Strength Level:
+                {{ result.level }}
+            </h5>
+
+        </div>
+
+        <div class="mt-4">
+
+            <img
+                src="{{ url_for('static', filename='charts/security_score.png') }}"
+                class="img-fluid rounded">
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}
